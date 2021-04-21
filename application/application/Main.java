@@ -2,10 +2,13 @@ package application;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
+import com.almasb.fxgl.core.math.Vec2;
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
+import com.almasb.fxgl.entity.GameWorld;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
+import com.almasb.fxgl.physics.box2d.dynamics.World;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -19,6 +22,15 @@ public class Main extends GameApplication {
     settings.setHeight(600);
     settings.setTitle("Basic Game App");
     settings.setVersion("0.1");
+
+    var world = new GameWorld();
+    var e = new Entity();
+    e.setReusable(true);
+    world.addEntity(e);
+    world.removeEntity(e);
+
+    // this is valid because e is reusable
+    world.addEntity(e);
   }
 
   @Override

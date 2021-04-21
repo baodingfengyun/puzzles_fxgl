@@ -4,7 +4,44 @@
       <root url="file://$PROJECT_DIR$/.bach/external-modules" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/audio-4.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-core-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-core-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-cutscene-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-entity-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-entity-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-gameplay-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-input-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-io-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-io-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-localization-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-media-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-profiles-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-scene-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-ui-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/fxgl-ui-11.15-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/jackson-annotations-2.12.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/jackson-core-2.12.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/jackson-databind-2.12.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/javafx-base-16-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/javafx-controls-16-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/javafx-fxml-16-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/javafx-graphics-16-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/javafx-media-16-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/javafx-swing-16-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/kotlin-stdlib-1.5.0-M2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/kotlin-stdlib-1.5.0-M2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/lifecycle-4.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/storage-4.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/util-4.0.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/kotlin-stdlib-1.5.0-M2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/kotlin-stdlib-1.5.0-M2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/kotlin-stdlib-1.5.0-M2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FXGL-sources/kotlin-stdlib-1.5.0-M2-sources.jar!/" />
+    </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/.bach/external-modules" recursive="false" />
   </library>
 </component>
