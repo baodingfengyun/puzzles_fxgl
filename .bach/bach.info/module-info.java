@@ -1,12 +1,17 @@
 import com.github.sormuras.bach.ProjectInfo;
-import com.github.sormuras.bach.ProjectInfo.Options;
-import com.github.sormuras.bach.ProjectInfo.Tools;
+import com.github.sormuras.bach.ProjectInfo.*;
 
 @ProjectInfo(
-    options = @Options(
-        tools = @Tools(limit = {"javac", "jar", "jlink"})
-    )
-)
+        name = "bach-fxgl",
+        version = "1-ea",
+        options = @Options(tools = @Tools(skip = "javadoc")),
+        libraries =
+        @Libraries(
+                externalLibraries = {
+                        @ExternalLibrary(name = LibraryName.JAVAFX, version = "16"),
+                        @ExternalLibrary(name = LibraryName.FXGL, version = "11.15"),
+                        @ExternalLibrary(name = LibraryName.SORMURAS_MODULES, version = "2021.04.13")
+                }))
 module bach.info {
-  requires com.github.sormuras.bach;
+    requires com.github.sormuras.bach;
 }
