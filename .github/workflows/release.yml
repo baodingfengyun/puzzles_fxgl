@@ -1,0 +1,66 @@
+name: release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag-version:
+        description: 'Tag as version'
+        required: true
+        default: '1-ea'
+      pre-release:
+        description: 'Pre-release? [true|false]'
+        required: true
+        default: 'true'
+
+env:
+  VERSION: ${{ github.event.inputs.tag-version }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  build:
+    name: 'Build with Java ${{ matrix.java }} on ${{ matrix.os }}'
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest ] # , macOS-latest, windows-latest ]
+        java: [ 16 ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: 'Check out repository'
+        uses: actions/checkout@v2
+      - name: 'Set up JDK'
+        uses: actions/setup-java@v2
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: 'zulu'
+      - name: 'Build with Bach'
+        uses: sormuras/bach-build@v1
+        with:
+          bach-arguments: --project-version ${{ env.VERSION }} build
+      - name: 'Zip the image'
+        run: jar --create --file ${{ github.event.repository.name }}-${{ env.VERSION }}-${{ runner.os }}.zip -C .bach/workspace/image .
+      - name: 'Upload build artifact'
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: ${{ github.event.repository.name }}-${{ env.VERSION }}-${{ runner.os }}.zip
+  deploy-to-releases:
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Check out repository'
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: 'Download all build artifacts'
+        uses: actions/download-artifact@v2
+      - name: 'Display structure of downloaded files'
+        run: ls -R
+      - name: 'Deploy to GitHub Releases'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.event.inputs.tag-version }}
+          prerelease: ${{ github.event.inputs.pre-release }}
+          body: 'Release ${{ env.VERSION }}'
+          files: artifact/*.zip
