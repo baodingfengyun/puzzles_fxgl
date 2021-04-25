@@ -1,12 +1,8 @@
 package application;
 
-import com.almasb.fxgl.dsl.FXGL;
-import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.logging.Logger;
 import javafx.scene.input.KeyCode;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 /**
  * 游戏主要逻辑
@@ -17,7 +13,7 @@ public class GameLogic {
     /**
      * 玩家对象
      */
-    private Entity player;
+    private GameObject player;
     /**
      * 行为对象
      */
@@ -28,10 +24,7 @@ public class GameLogic {
     private long frameCounter;
 
     public GameLogic() {
-        player = FXGL.entityBuilder()
-                .at(300, 300)
-                .view(new Rectangle(25, 25, Color.BLUE))
-                .buildAndAttach();
+        player = new GameObject();
         userAction = new GameUserAction(player);
         frameCounter = 0L;
     }

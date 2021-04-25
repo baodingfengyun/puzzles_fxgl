@@ -1,7 +1,6 @@
 package application;
 
 import com.almasb.fxgl.dsl.FXGL;
-import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.UserAction;
 
 /**
@@ -14,9 +13,9 @@ public class GameUserAction {
     /**
      * 玩家对象
      */
-    private Entity player;
+    private GameObject player;
 
-    public GameUserAction(Entity player) {
+    public GameUserAction(GameObject player) {
         this.player = player;
     }
 
@@ -24,7 +23,7 @@ public class GameUserAction {
         return new UserAction(name) {
             @Override
             protected void onAction() {
-                player.translateX(5); // move right 5 pixels
+                player.getEntity().translateX(5); // move right 5 pixels
                 FXGL.getWorldProperties().increment("pixelsMoved", +5);
             }
         };
@@ -34,7 +33,7 @@ public class GameUserAction {
         return new UserAction(name) {
             @Override
             protected void onAction() {
-                player.translateX(-5); // move left 5 pixels
+                player.getEntity().translateX(-5); // move left 5 pixels
                 FXGL.getWorldProperties().increment("pixelsMoved", +5);
             }
         };
@@ -44,7 +43,7 @@ public class GameUserAction {
         return new UserAction(name) {
             @Override
             protected void onAction() {
-                player.translateY(-5); // move up 5 pixels
+                player.getEntity().translateY(-5); // move up 5 pixels
                 FXGL.getWorldProperties().increment("pixelsMoved", +5);
             }
         };
@@ -54,7 +53,7 @@ public class GameUserAction {
         return new UserAction(name) {
             @Override
             protected void onAction() {
-                player.translateY(5); // move down 5 pixels
+                player.getEntity().translateY(5); // move down 5 pixels
                 FXGL.getWorldProperties().increment("pixelsMoved", +5);
             }
         };
