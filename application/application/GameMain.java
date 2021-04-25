@@ -31,9 +31,17 @@ public class GameMain extends GameApplication {
     System.out.println("-------> initSettings");
     settings.setWidth(800);
     settings.setHeight(600);
-    settings.setTitle("Basic Game App");
+    settings.setTitle("谜题游戏");
     settings.setVersion("0.1");
-
+//    settings.setManualResizeEnabled(false);
+    // 播放介绍(FXGL+JavaFX)
+//    settings.setIntroEnabled(true);
+    // 主菜单
+//    settings.setMainMenuEnabled(true);
+    // 游戏菜单
+//    settings.setGameMenuEnabled(true);
+    // 玩家属性
+//    settings.setUserProfileEnabled(true);
   }
 
   // 第二个被回调的
