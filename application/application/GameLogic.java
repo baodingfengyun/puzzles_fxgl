@@ -8,11 +8,23 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * 游戏主要逻辑
+ */
 public class GameLogic {
     private static final Logger log = Logger.get(GameLogic.class);
 
+    /**
+     * 玩家对象
+     */
     private Entity player;
+    /**
+     * 行为对象
+     */
     private GameUserAction userAction;
+    /**
+     * 刷新帧数
+     */
     private long frameCounter;
 
     public GameLogic() {

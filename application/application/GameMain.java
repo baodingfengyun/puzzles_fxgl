@@ -9,12 +9,23 @@ import javafx.scene.text.Text;
 
 import java.util.Map;
 
+/**
+ * 游戏入口(启动点)
+ *
+ * @author liupu
+ */
 public class GameMain extends GameApplication {
   private static final Logger log = Logger.get(GameMain.class);
 
+  /**
+   * 游戏逻辑
+   */
   private GameLogic logic;
 
-  // 第一个被回调的
+  /**
+   * 第一个被回调的,设置窗口宽高,标题,版本
+   * @param settings 设置对象
+   */
   @Override
   protected void initSettings(GameSettings settings) {
     System.out.println("-------> initSettings");
@@ -29,7 +40,6 @@ public class GameMain extends GameApplication {
   @Override
   protected void initInput() {
     System.out.println("-------> initInput");
-
   }
 
   // 第三个被回调的

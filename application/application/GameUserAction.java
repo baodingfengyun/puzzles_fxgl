@@ -11,6 +11,9 @@ import com.almasb.fxgl.input.UserAction;
  */
 public class GameUserAction {
 
+    /**
+     * 玩家对象
+     */
     private Entity player;
 
     public GameUserAction(Entity player) {
