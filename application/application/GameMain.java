@@ -6,6 +6,7 @@ import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.logging.Logger;
 import javafx.scene.text.Text;
+import puzzles.logic.GameLogic;
 
 import java.util.Map;
 

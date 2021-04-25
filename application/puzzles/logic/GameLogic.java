@@ -1,5 +1,7 @@
-package application;
+package puzzles.logic;
 
+import puzzles.object.GameObject;
+import puzzles.action.GameUserAction;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.logging.Logger;
 import javafx.scene.input.KeyCode;

@@ -1,7 +1,8 @@
-package application;
+package puzzles.action;
 
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.input.UserAction;
+import puzzles.object.GameObject;
 
 /**
  * 游戏玩家行为

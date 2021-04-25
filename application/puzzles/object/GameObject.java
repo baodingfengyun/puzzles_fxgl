@@ -1,4 +1,4 @@
-package application;
+package puzzles.object;
 
 import com.almasb.fxgl.dsl.FXGL;
 import com.almasb.fxgl.entity.Entity;
